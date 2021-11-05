@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
-app.use(express.json());
-const mongoose = require.apply("mongoose");
+
+const mongoose = require("mongoose");
 
 const mainCharacters = ["Redmund", "Baldur", "Altuin", "Silliris"];
 //
