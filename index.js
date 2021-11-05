@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 app.use(express.json());
+const mongoose = require.apply("mongoose");
 
 const mainCharacters = ["Redmund", "Baldur", "Altuin", "Silliris"];
 //
@@ -33,6 +34,10 @@ app.delete("/main-characters", (req, res) => {
 
   mainCharacters.splice(index, 1);
   return res.json({ message: "O personagem foi deletado" });
+});
+
+mongoose.connect("", () => {
+  console.log("Connected successfully");
 });
 
 app.listen(3000);
