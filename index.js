@@ -3,7 +3,7 @@ const server = express();
 server.use(express.json());
 
 const mainCharacters = ["Redmund", "Baldur", "Altuin", "Silliris"];
-
+//
 server.get("/mainCharacters/:index", (req, res) => {
   const { index } = req.params;
   return res.json(mainCharacters[index]);
