@@ -36,8 +36,11 @@ app.delete("/main-characters", (req, res) => {
   return res.json({ message: "O personagem foi deletado" });
 });
 
-mongoose.connect("", () => {
-  console.log("Connected successfully");
-});
+mongoose.connect(
+  "mongodb+srv://nkhl:12301230@astharnia-test.f9egx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  () => {
+    console.log("Connected successfully");
+  }
+);
 
 app.listen(3000);
